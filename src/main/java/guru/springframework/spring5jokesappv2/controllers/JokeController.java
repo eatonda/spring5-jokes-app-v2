@@ -15,6 +15,7 @@ public class JokeController {
 
     @RequestMapping({"/", ""})  //Map either path to index
     public String showJoke(Model model) {
+        // Models are used for thymeleaf rendering. They are essentially maps.
         model.addAttribute("joke", jokeService.getJoke());
         return "index"; //Implement index view
     }
